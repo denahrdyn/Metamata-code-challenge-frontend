@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Books</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-costum">
+            <div class="container">  
+                <h1 class="title mx-auto">RecipeBooks</h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="jumbotron mx-auto d-flex">
+                <h1 class="jumbotron-title">Temukan Resep Manca Negara Terbaik Disini!</h1>
+            </div>
+
+            <div class="container search">
+                <form>
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="text" class="form-control custom-search">
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-search">Cari</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="result">
+                <h3 class="search-title">Hasil Pencarian Resep</h3>
+            </div>
+
+            <div class="mx-auto d-flex flex-wrap recipe-list justify-content-center align-items-center">
+                <div class="card-recipe"> 
+                    <div class="recipe-item">
+                        <div class="recipe-img">
+                            <img src="./assets/images/xxyupu14682625131.png" alt="Fish Pie">
+                        </div>
+                        <div class="row">
+                            <div class="d-flex col-6">
+                                <h5 class="recipe-title">Fish Pie</h5>
+                            </div>
+                            <div class="d-flex col-6 justify-content-end align-items-start">
+                                <div class="recipe-favorite">
+                                    <button class="btn favorite-button" onclick="addToLocalStorage({favorit : 'Fish Pie 1'})">favorit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-recipe">
+                    <div class="recipe-item">
+                        <div class="recipe-img">  
+                            <img src="./assets/images/xxyupu14682625131.png" alt="Fish Pie">    
+                        </div>
+                        <div class="row">
+                            <div class="d-flex col-6">
+                                <h5 class="recipe-title">Fish Pie</h5>
+                            </div>
+                            <div class="d-flex col-6 justify-content-end align-items-start">
+                                <div class="recipe-favorite">
+                                    <button class="btn favorite-button" onclick="addToLocalStorage({favorit : 'Fish Pie 2'})">favorit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-recipe">
+                    <div class="recipe-item">
+                        <div class="recipe-img">
+                            <img src="./assets/images/xxyupu14682625131.png" alt="Fish Pie">
+                        </div>
+                        <div class="row">
+                            <div class="d-flex col-6">
+                                <h5 class="recipe-title">Fish Pie</h5>
+                            </div>
+                            <div class="d-flex col-6 justify-content-end align-items-start">
+                                <div class="recipe-favorite">
+                                    <button class="btn favorite-button" onclick="addToLocalStorage({favorit : 'Fish Pie 3'})">favorit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <h4 class="footer-title text-center">Developed by Dena Herdiyani</h4>
+        </div>
+    </footer>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script>
+        function addToLocalStorage(favorit) {
+           localStorage.setItem("favorit", JSON.stringify(favorit));
+        }
+    </script>
+</body>
+</html>
